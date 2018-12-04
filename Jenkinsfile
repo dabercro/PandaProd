@@ -1,7 +1,6 @@
 //// DEFINE THESE PLEASE ////
 
-def in_files = ['3E56C96C-1935-FB42-BCE8-E09BA813F441', '592C4C53-9E40-3A4C-8E5C-854C8D7021C3',
-                '86D3C5F3-C2F0-4B4B-ADB7-413EF9C94C38', 'EDA1C953-5E41-FF4B-BF50-E7FE0F46962F']
+def in_files = ['023E56A6-4FF3-E711-867C-68B59972C49E']
 
 def cmssw_version = 'CMSSW_10_2_4_patch1'
 def scram_arch = 'slc6_amd64_gcc700'
@@ -38,7 +37,7 @@ def produce_panda(cmssw_version, do_src, base) {
            INPUT=''' + in_files_dir + '''/$BASE.root
            # Get the number of events to run. Sort of based on the size of the event content.
            MAX=$(edmEventSize -v $INPUT | perl -ne '/\\. [\\d\\.]+ [\\d\\.]+$/ && print $_' | perl -ane '$sum += $F[1]} END { print int(1e4 * exp($sum/-2e5))')
-           cmsRun $(perl -ne '/^\\/store\\/(data|mc)\\// && print $1; /2018.*\\/PromptReco/ && print "-2018Prompt"' $HOME/miniaod/$BASE.txt).py inputFiles=file:$INPUT outputFile=$BASE.root maxEvents=$MAX
+           cmsRun test.py inputFiles=file:$INPUT outputFile=$BASE.root maxEvents=$MAX
            '''
       }
     }
