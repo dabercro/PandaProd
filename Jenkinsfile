@@ -2,8 +2,8 @@
 
 def in_files = ['023E56A6-4FF3-E711-867C-68B59972C49E']
 
-def cmssw_version = 'CMSSW_10_1_4'
-def scram_arch = 'slc6_amd64_gcc630'
+def cmssw_version = 'CMSSW_10_2_4_patch1'
+def scram_arch = 'slc6_amd64_gcc700'
 def panda_tree_user = 'PandaPhysics'
 def panda_tree_branch = 'master'
 
@@ -102,7 +102,7 @@ node {
       dir ("${cmssw_version}/src") {
         sh do_src + '''
            set +x; eval `scramv1 runtime -sh`; set -x
-           ./PandaProd/Producer/cfg/setuprel.sh
+           #./PandaProd/Producer/cfg/setuprel.sh
            '''
       }
     }
