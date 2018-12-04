@@ -374,7 +374,6 @@ process.MonoXFilter.taggingMode = True
 ### RECO PATH
 
 process.reco = cms.Path(
-    egmCorrectionSequence +
     egmIdSequence +
     puppiSequence +
     process.MonoXFilter +
