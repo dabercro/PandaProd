@@ -8,13 +8,11 @@ INSTALL=$CMSSW_BASE/src/PandaProd/Producer/scripts/install-pkg
 
 
 # Cut-based electron and photon ID
-$INSTALL lsoffi CMSSW_9_4_0_pre3_TnP RecoEgamma/ElectronIdentification RecoEgamma/PhotonIdentification
+$INSTALL lsoffi CMSSW_9_4_0_pre3_TnP RecoEgamma/PhotonIdentification
 
 # MVA electron ID
 # RecoEgamma/ElectronIdentification overlaps with the line above but most of the files added above are not contained in this branch and thus will not be overwritten
-$INSTALL guitargeek ElectronID_MVA2017_940pre3 RecoEgamma/EgammaTools RecoEgamma/ElectronIdentification -x RecoEgamma/ElectronIdentification/python/Identification/cutBasedElectronID_tools.py
-# This is getting ridiculous (difference between 94X and 101X is purely technical)
-cp $CMSSW_RELEASE_BASE/src/RecoEgamma/EgammaTools/src/EcalClusterLocal.cc $SRC/RecoEgamma/EgammaTools/src/EcalClusterLocal.cc
+$INSTALL dabercro panda-014 RecoEgamma/EgammaTools RecoEgamma/ElectronIdentification
 
 # MVA weights for ID
 git clone -b CMSSW_9_4_0_pre3_TnP https://github.com/lsoffi/RecoEgamma-ElectronIdentification.git electronid
