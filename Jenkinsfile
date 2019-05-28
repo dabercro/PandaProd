@@ -1,9 +1,10 @@
 //// DEFINE THESE PLEASE ////
 
-def in_files = ['3E56C96C-1935-FB42-BCE8-E09BA813F441', '592C4C53-9E40-3A4C-8E5C-854C8D7021C3',
-                '86D3C5F3-C2F0-4B4B-ADB7-413EF9C94C38', 'EDA1C953-5E41-FF4B-BF50-E7FE0F46962F']
+def in_files = ['023E56A6-4FF3-E711-867C-68B59972C49E',
+                'E0A114B0-56F1-E711-8C5F-44A842B46A7E',
+                'A04390E4-219B-E811-B4A7-002590FD5E82']
 
-def cmssw_version = 'CMSSW_10_2_4_patch1'
+def cmssw_version = 'CMSSW_9_4_14'
 def scram_arch = 'slc6_amd64_gcc700'
 def panda_tree_user = 'PandaPhysics'
 def panda_tree_branch = 'master'
