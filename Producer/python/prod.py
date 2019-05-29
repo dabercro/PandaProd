@@ -8,9 +8,6 @@ if options.config == '31Mar2018':
     options.isData = True
     options.globaltag = '94X_dataRun2_ReReco_EOY17_v6'
     options.redojec = True
-elif options.config == '17Jul2018':
-    options.isData = True
-    options.globaltag = '94X_dataRun2_v10'
 elif options.config == '2018Prompt':
     options.isData = True
     options.globaltag = '101X_dataRun2_Prompt_v11'
